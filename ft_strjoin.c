@@ -26,14 +26,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str = malloc((ft_strlen(str1) + ft_strlen(str2)) * sizeof(char) + 1);
 	if (!new_str)
 		return (NULL);
-		while (str1[i])
+	while (str1[i])
 	{
-        new_str[i] = str1[i];
-        i++;
-    }
-    while (str2[j])
-        new_str[i++] = str2[j++];
-		return(new_str);
+		new_str[i] = str1[i];
+		i++;
+	}
+	while (str2[j])
+		new_str[i++] = str2[j++];
+	return (new_str);
 }
 // int main()
 // {

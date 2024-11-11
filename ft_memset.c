@@ -14,7 +14,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
-	unsigned char	l;	
+	unsigned char	l;
 	size_t			i;
 
 	i = 0;
@@ -27,13 +27,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (p);
 }
-
 // #include <string.h>
 // int main()
-// {	
+// {
 // int k;
 // ft_memset(&k, 1, 2);
 // ft_memset(&k,189,1);
 // printf("%d", k);
 // }
-

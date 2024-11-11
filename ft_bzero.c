@@ -13,17 +13,17 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str = (unsigned char*)s;
-	size_t	i;
+	unsigned char	*str;
+	size_t			i;
 
 	i = 0;
+	str = (unsigned char *)s;
 	while (i < n)
 	{
 		str[i] = 0;
 		i++;
 	}
 }
-
 // int main()
 // {
 // 	char str[6] = "hello";
@@ -33,4 +33,3 @@ void	ft_bzero(void *s, size_t n)
 // 	bzero(str1, 1);
 // 	printf("%s\n", str1);
 // }
-

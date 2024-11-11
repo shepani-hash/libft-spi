@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lhchiban <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 15:49:05 by lhchiban          #+#    #+#             */
+/*   Updated: 2024/10/27 15:49:08 by lhchiban         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str = (unsigned char*)s;
-	size_t	i;
+	unsigned char	*str;
+	size_t			i;
 
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -13,14 +25,14 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-  size_t  i;
-  void    *call;
-  
-  if (count == 0)
-    count = 1;
-  if (size == 0)
+	size_t		i;
+	void		*call;
+
+	if (count == 0)
+		count = 1;
+	if (size == 0)
 		size = 1;
 	i = count * size;
 	call = malloc(i);
@@ -30,7 +42,6 @@ void    *ft_calloc(size_t count, size_t size)
 		ft_bzero(call, i);
 	return (call);
 }
-
 // int main() {
 //     // Test ft_bzero
 //     char buffer[10] = "Hello";
@@ -45,6 +56,6 @@ void    *ft_calloc(size_t count, size_t size)
 //         printf("%d", array[i]); // Should print 0
 //         i++;
 //        // free(array); // Free the allocated memory
-//     } 
+//     }
 //     return 0;
 // }

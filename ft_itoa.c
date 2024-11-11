@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lhchiban <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/25 13:26:44 by lhchiban          #+#    #+#             */
+/*   Updated: 2024/10/25 19:23:19 by lhchiban         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
     int sign;
     int i;
@@ -18,7 +29,7 @@ char *ft_itoa(int n)
     while (n1 != 0)
     {
         n1 /= 10;
-        i++; 
+        i++;
     }
     n1 = i;
     t = malloc(i+1);
@@ -33,11 +44,7 @@ char *ft_itoa(int n)
             t[0] = '-';
         }
         else if (sign != 1)
-        {
-            printf("n = %d\n i = %d\n", n, i);    
             t[i--] = (n % 10) + '0';
-            printf("n = %d\n i = %d\n", n, i);
-        }
         n /= 10;
     }
     t[n1] = '\0';
@@ -51,3 +58,4 @@ char *ft_itoa(int n)
 //     printf("%s", ft_itoa(-1203));
 
 // }
+// handell this
