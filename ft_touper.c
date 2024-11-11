@@ -1,12 +1,23 @@
-int ft_toupper(int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_touper.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lhchiban <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/11 11:29:38 by lhchiban          #+#    #+#             */
+/*   Updated: 2024/11/11 11:35:21 by lhchiban         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_toupper(int c)
 {
-    if (c > 96 && c < 123)
-        return(c-=32);
-    return (c);
+	if (c > 96 && c < 123)
+		return (c -= 32);
+	return (c);
 }
-#include <stdio.h>
-int main()
-{
-    unsigned char  a = (unsigned char)c;
-    printf("%c\n", toupper(1));
-}
+
+// int main()
+// {
+//     printf("%c\n", ft_toupper(1));
+// }

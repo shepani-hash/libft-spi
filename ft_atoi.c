@@ -24,14 +24,14 @@ int ft_atoi(const char  *str)
 	}
 	return (r_v * sign);
 }
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-	char str[] = "-99999999999"; // handel this case
-	ft_atoi(str);
-	char str1[] = "-99999999999"; // handel this case
+// #include <stdlib.h>
+// #include <stdio.h>
+// int main()
+// {
+// 	char str[] = "-99999999999"; // handel this case
+// 	ft_atoi(str);
+// 	char str1[] = "-99999999999"; // handel this case
 
-	printf("%d\n",atoi(str1));
-	printf("%d", ft_atoi(str));// u need understood what happen whit memory
-}
+// 	printf("%d\n",atoi(str1));
+// 	printf("%d", ft_atoi(str));// u need understood what happen whit memory
+// }

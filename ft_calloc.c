@@ -31,20 +31,20 @@ void    *ft_calloc(size_t count, size_t size)
 	return (call);
 }
 
-int main() {
-    // Test ft_bzero
-    char buffer[10] = "Hello";
-    printf("Before ft_bzero: '%s'\n", buffer);
-    ft_bzero(buffer, 5);
-    printf("After ft_bzero: '%s'\n", buffer); // Should print empty string
-    int i;
-    i = 0;
-    // Test ft_calloc
-    int *array = (int *)ft_calloc(5, sizeof(int));
-    while (array != NULL && i != 18) {
-        printf("%d", array[i]); // Should print 0
-        i++;
-       // free(array); // Free the allocated memory
-    } 
-    return 0;
-}
+// int main() {
+//     // Test ft_bzero
+//     char buffer[10] = "Hello";
+//     printf("Before ft_bzero: '%s'\n", buffer);
+//     ft_bzero(buffer, 5);
+//     printf("After ft_bzero: '%s'\n", buffer); // Should print empty string
+//     int i;
+//     i = 0;
+//     // Test ft_calloc
+//     int *array = (int *)ft_calloc(5, sizeof(int));
+//     while (array != NULL && i != 18) {
+//         printf("%d", array[i]); // Should print 0
+//         i++;
+//        // free(array); // Free the allocated memory
+//     } 
+//     return 0;
+// }

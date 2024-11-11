@@ -27,9 +27,9 @@ void    *ft_memcpy(void * dst, const void * src, size_t n)
     return(dst);
 }
 
-int main()
-{
-    char src[9] = "lhoussei";
-    char dst[9] = "heklklk";
-    printf("%s", ft_memcpy(dst, src, 8));//what happen in overlap
-}
+// int main()
+// {
+//     char src[9] = "lhoussei";
+//     char dst[9] = "heklklk";
+//     printf("%s", ft_memcpy(dst, src, 8));//what happen in overlap
+// }

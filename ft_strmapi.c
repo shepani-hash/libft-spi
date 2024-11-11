@@ -6,25 +6,31 @@ char *ft_strmapi(char const *s, char (*f)(unsigned  int, char))
     int i;
 
     i = 0;
-    holder  = malloc(ft_strlen(s));
+    holder  = malloc(sizeof(char) * (ft_strlen(s)+1));
     if (!holder)
         return(NULL);
     while (s[i])
     {
-        *holder++ = f(i, s[i]);
+        holder[i] = f(i, s[i]);
         i++;
     }
+    holder[i] = '\0';
     return (holder);
 }
 
-int main()
+char func(unsigned int i, char v)
 {
-    char    func(unsigned int   i, char c);
-    {
-        return (c + i);
-    }
-    char    str[5] = "hello";
-    char *result = ft_strmapi(str, func);
-    printf("%s", result); 
-
+    return (v - i);
 }
+ 
+// int main()
+// {
+
+//     char *result  = ft_strmapi("hello", func);
+//     if (result) {
+//         ft_putendl_fd(result, 1);
+//         free(result);
+//     }
+//     printf("%lu", sizeof(unsigned long long));
+//     return 0;
+// }

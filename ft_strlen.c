@@ -9,21 +9,22 @@
 /*   Updated: 2024/10/27 00:01:48 by lhchiban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strlen(const char	*s)
+size_t	ft_strlen(const char	*s)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }
-#include <stdio.h>
-int main()
-{
-	char str[5] = "hello";
 
-	ft_strlen(str);
-}
+// int main()
+// {
+// 	char str[5] = "hello";
+
+// 	ft_strlen(str);
+// }
 

@@ -23,14 +23,14 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-#include <string.h>
-int main()
-{
-	char str[6] = "hello";
-	ft_bzero(str, 1);
-	printf("%s\n", str);
-	char str1[6] = "hello";
-	bzero(str1, 1);
-	printf("%s\n", str1);
-}
+
+// int main()
+// {
+// 	char str[6] = "hello";
+// 	ft_bzero(str, 1);
+// 	printf("%s\n", str);
+// 	char str1[6] = "hello";
+// 	bzero(str1, 1);
+// 	printf("%s\n", str1);
+// }
 

@@ -16,13 +16,13 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-#include <stdio.h>
-int main()
-{
-	printf("%d", ft_isdigit(1));
-	printf("%d", ft_isdigit(1));
-	printf("%d", ft_isdigit('9'));
-	printf("%d", ft_isdigit(2));
-	printf("%d", ft_isdigit('e'));
-}
+
+// int main()
+// {
+// 	printf("%d", ft_isdigit(1));
+// 	printf("%d", ft_isdigit(1));
+// 	printf("%d", ft_isdigit('9'));
+// 	printf("%d", ft_isdigit(2));
+// 	printf("%d", ft_isdigit('e'));
+// }
 

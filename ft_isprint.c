@@ -9,7 +9,8 @@
 /*   Updated: 2024/10/26 11:39:35 by lhchiban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	write(1, &c, 1);
@@ -18,14 +19,14 @@ int	ft_isprint(int c)
 		return (0);
 	return (1);
 }
-#include <stdio.h>
-int main()
-{
-	int a;
-	a = -1;
-	while (a <= 128)
-	{
-		printf("%d %d\n", isprint(a), a);
-		a++;
-	}
-}
+
+// int main()
+// {
+// 	int a;
+// 	a = -1;
+// 	while (a <= 128)
+// 	{
+// 	//	printf("%d %d\n", isprint(a), a);
+// 		a++;
+// 	}
+// }

@@ -18,9 +18,9 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     return (str1[i] - str2[i]);
 }
 
-int main()
-{
-    char str[6] = "hello";
-    char str1[7] = "hellog";
-    printf("%d",ft_memcmp(str, str1, -5)); // why when i set negative value he is keep compiling
-}
+// int main()
+// {
+//     char str[6] = "hello";
+//     char str1[7] = "hellog";
+//     printf("%d",ft_memcmp(str, str1, -5)); // why when i set negative value he is keep compiling
+// }

@@ -1,14 +1,27 @@
-int ft_toupper(int c)
-{
-    if (c > 64 && c < 91)
-        return(c+=32);
-    return (c);
-}
-#include <stdio.h>
-int main()
-{
-    int a;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lhchiban <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/11 11:35:49 by lhchiban          #+#    #+#             */
+/*   Updated: 2024/11/11 11:39:19 by lhchiban         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
-    a = 'C';
-    printf("%c\n", toupper(90));
+int	ft_tolower(int c)
+{
+	if (c > 64 && c < 91)
+		return (c += 32);
+	return (c);
 }
+
+// int main()
+// {
+//     int a;
+
+//     a = 'C';
+//     printf("%c\n", ft_tolower(90));
+// }

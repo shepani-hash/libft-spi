@@ -1,13 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_itoa(int n)
 {
     int sign;
-    int i, n1;
+    int i;
+    int n1;
     char *t;
 
     n1 = n;
+    i = 0;
     if (n < 0)
     {
         n *= -1;
@@ -43,10 +44,10 @@ char *ft_itoa(int n)
     return (t);
 }
 
-int main()
-{
-    int i;
-    i = 123;
-    printf("%s", ft_itoa(-1203));
+// int main()
+// {
+//     int i;
+//     i = 123;
+//     printf("%s", ft_itoa(-1203));
 
-}
+// }

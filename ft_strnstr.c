@@ -2,7 +2,7 @@
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	i;
 	int	j;
     char   *haystack1 = (char*)haystack;
     char   *needle1 = (char*)needle;
@@ -22,15 +22,15 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL); // u need to understood more and the size_t "problem"
 }
-#include <string.h>
-int main(void)
-{
-   char *string1 = "a haystack needle";
-   char *string2 = "haystack";
-   char *result;
+
+// int main(void)
+// {
+//    char *string1 = "a haystack needle";
+//    char *string2 = "haystack";
+//    char *result;
  
-  result = ft_strnstr(string1,string2, -1);
-     /* Result = a pointer to "haystack" */
-  printf("%s\n", result);
-}
+//   result = ft_strnstr(string1,string2, -1);
+//      /* Result = a pointer to "haystack" */
+//   printf("%s\n", result);
+// }
  

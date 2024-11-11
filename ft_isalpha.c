@@ -15,13 +15,13 @@ int	ft_isalpha(int c)
 		return (0);
 	return (1);
 }
-#include <stdio.h>
-int main()
-{
-	char c;
-	c = 'q';
-	printf("%d", ft_isalpha(1));
-	printf("%d", ft_isalpha('z'));
-	printf("%d", ft_isalpha('Z'));
-	printf("%d", ft_isalpha('A'));
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	char c;
+// 	c = 'q';
+// 	printf("%d", ft_isalpha(1));
+// 	printf("%d", ft_isalpha('z'));
+// 	printf("%d", ft_isalpha('Z'));
+// 	printf("%d", ft_isalpha('A'));
+// }
