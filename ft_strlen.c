@@ -6,25 +6,22 @@
 /*   By: lhchiban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:15:00 by lhchiban          #+#    #+#             */
-/*   Updated: 2024/10/27 00:01:48 by lhchiban         ###   ########.fr       */
+/*   Updated: 2024/11/11 20:29:29 by lhchiban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 size_t	ft_strlen(const char	*s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }
-
 // int main()
 // {
 // 	char str[5] = "hello";
-
 // 	ft_strlen(str);
 // }
-
