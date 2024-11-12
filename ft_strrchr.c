@@ -18,24 +18,23 @@ char	*ft_strrchr(const char *s, int c)
 
 	str = (char *)s;
 	str_len = ft_strlen (str);
-	while (str[str_len - 1])
+	if(s[0] == '\0')
+		return str;
+	while (str_len--)
 	{
 		if (c == str[str_len])
-			return (&str[str_len]);
-		str_len--;
+			return (str+str_len);
+		if((char)c == '\0' && str_len == 0)
+			return str;
 	}
 	str = NULL;
 	return (str);
 }
 // int main(void)
 // {
-//   char buffer1[17] = "coputer program";
-//   char * ptr;
-//   int    ch = 'o';
-//   ptr = ft_strrchr( buffer1, ch );
-//   printf( "The first occurrence of %c in '%s' is '%s'\n",ch, buffer1, ptr );
-//   char buffer2[17] = "coputer program";
-//   char * ptr2;
-//   ptr2 = strrchr( buffer2, ch );
-//   printf( "The first occurrence of %c in '%s' is '%s'\n",ch, buffer2, ptr2 );
+// 	char arr[] = "bonjour";
+// 	char *str1;
+// 	str1 = ft_strrchr(arr, 'b');
+//         printf("%s\n", str1);
+
 // }

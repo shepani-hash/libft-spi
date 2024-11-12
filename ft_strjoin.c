@@ -14,30 +14,31 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_str;
-	int		i;
-	int		j;
-	char	*str1;
-	char	*str2;
+	size_t	i;
+	size_t total_size;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	i = 0;
-	j = 0;
-	new_str = malloc((ft_strlen(str1) + ft_strlen(str2)) * sizeof(char) + 1);
+	i = -1;
+	total_size = ft_strlen(s1) + ft_strlen(s2) +1;
+	new_str = malloc(sizeof(char)*total_size);
 	if (!new_str)
 		return (NULL);
-	while (str1[i])
+	if(total_size == 1)
 	{
-		new_str[i] = str1[i];
-		i++;
+		new_str[0] = '\0';
+		return (new_str);
 	}
-	while (str2[j])
-		new_str[i++] = str2[j++];
+	while (++i < total_size)
+	{
+		if(i < ft_strlen(s1))
+			new_str[i] = s1[i];
+		else
+			new_str[i] = *s2++;
+	}
 	return (new_str);
 }
 // int main()
 // {
-//     char *str1 = "g";
-//     char *str2 = "";
-//     printf("%s",ft_strjoin(str1,str2));
+//     char *str1 = "ness-ness+";
+//     char *str2 = "Btipana ";
+//     printf("%s",ft_strjoin(str1, str2));
 // }

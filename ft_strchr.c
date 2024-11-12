@@ -16,11 +16,15 @@ char	*ft_strchr(const char *s, int c)
 	char	*str;
 
 	str = (char *)s;
+	if(s[0] == '\0')
+		return str;
 	while (*str)
 	{
-		if (c == *str)
+		if ((char)c == *str)
 			return (str);
 		str++;
+		if((char)c == '\0' && *str == '\0')
+			return str;
 	}
 	str = NULL;
 	return (str);
@@ -28,13 +32,8 @@ char	*ft_strchr(const char *s, int c)
 // #include <string.h>
 // int main(void)
 // {
-//   char buffer1[17] = "hhello";
-//   char * ptr;
-//   int    ch = 58;
-//   ptr = ft_strchr( buffer1, ch );
-//   printf( "The first occurrence of %c in '%s' is '%s'\n",ch, buffer1, ptr );
-//   char buffer2[17] = "coputer program";
-//   char * ptr2;
-//   ptr2 = strchr( buffer2, ch );
-//   printf( "The first occurrence of %c in '%s' is '%s'\n",ch, buffer2, ptr2 );
+// 	char str[] = "hhyhyh";
+// 	char *str1;
+// 	str1 = ft_strchr(str, 'r');
+//         printf("%s\n", str1);
 // }

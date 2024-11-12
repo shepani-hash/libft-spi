@@ -22,10 +22,10 @@ int	ft_atoi(const char	*str)
 	r_v = 0;
 	while (str[i] <= 32 || str[i] == 127)
 		i++;
-	while (str[i] == 45 || str[i] == 43)
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == 45)
-			sign *= -1;
+		if (str[i] == '-')
+			sign = sign * -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -35,14 +35,15 @@ int	ft_atoi(const char	*str)
 	}
 	return (r_v * sign);
 }
-// #include <stdlib.h>
-// #include <stdio.h>
-// int main()
-// {
+#include <stdlib.h>
+#include <stdio.h>
+int main()
+{
 // 	char str[] = "-99999999999"; // handel this case
 // 	ft_atoi(str);
 // 	char str1[] = "-99999999999"; // handel this case
 
-// 	printf("%d\n",atoi(str1));
+	printf("%d\n",atoi("\e475"));
+	printf("%d\n",ft_atoi("\e475"));
 // 	printf("%d", ft_atoi(str));// u need understood what happen whit memory
-// }
+}
