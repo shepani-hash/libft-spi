@@ -15,6 +15,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	int		j;
+	char	*haystack1;
+	char	*needle1;
 
 	i = 0;
 	j = 0;
@@ -38,8 +40,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // {
 //    char *string1 = "a haystack needle";
 //    char *string2 = "haystack";
-//    char *result; 
+//    char *result;
 //   result = ft_strnstr(string1,string2, -1);
 //      /* Result = a pointer to "haystack" */
 //   printf("%s\n", result);
-// } 
+// }
