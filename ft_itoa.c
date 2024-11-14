@@ -11,51 +11,54 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static unsigned int	ft_n_len(int nb)
 {
-    int sign;
-    int i;
-    int n1;
-    char *t;
+	unsigned int	len;
 
-    n1 = n;
-    i = 0;
-    if (n < 0)
-    {
-        n *= -1;
-        sign = 1;
-        i++;
-    }
-    while (n1 != 0)
-    {
-        n1 /= 10;
-        i++;
-    }
-    n1 = i;
-    t = malloc(i+1);
-    if (!t)
-        return (NULL);
-    i = n1 - 1;
-    while (i >= 0)
-    {
-        if (sign == 1)
-        {
-            t[i--] = (n % 10) + '0';
-            t[0] = '-';
-        }
-        else if (sign != 1)
-            t[i--] = (n % 10) + '0';
-        n /= 10;
-    }
-    t[n1] = '\0';
-    return (t);
+	len = 0;
+	if (nb == 0)
+		return (1);
+	if (nb < 0)
+		len += 1;
+	while (nb != 0)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
 }
 
+char	*ft_itoa(int n)
+{
+    unsigned int    nb;
+    unsigned int    len;
+    char            *t;
+
+	len = ft_n_len(n);
+	t = (char *)malloc(sizeof(char) * (len + 1));
+	if (t == NULL)
+		return (t);
+	if (n < 0)
+	{
+		t[0] = '-';
+		nb = -n;
+	}
+	else
+		nb = n;
+	if (nb == 0)
+		t[0] = '0';
+	t[len] = '\0';
+	while (nb != 0)
+	{
+		t[len - 1] = (nb % 10) + '0';
+		nb = nb / 10;
+		len--;
+	}
+	return (t);
+}
 // int main()
 // {
-//     int i;
-//     i = 123;
-//     printf("%s", ft_itoa(-1203));
-
+//     //ft_itoa(203);
+//     printf("%s", ft_itoa(-111));
 // }
 // handell this

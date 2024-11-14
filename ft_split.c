@@ -32,10 +32,9 @@ static int	count_w(const char *s, char sep)
 	return (c_w);
 }
 
-
-static void check_4_free(char	**holder, int wc)
+static	void	check_4_free(char	**holder, int wc)
 {
-	while(wc--)
+	while (wc--)
 	{
 		free(holder[wc]);
 		holder[wc] = NULL;
@@ -64,7 +63,7 @@ char	**ft_split(char const *s, char c)
 			if (i > sep_end)
 			{
 				holder[w_c++] = ft_substr(s, sep_end, i - sep_end);
-				if(!holder[w_c-1])
+				if (!holder[w_c - 1])
 					return (check_4_free(holder, w_c), NULL);
 			}
 			sep_end = i + 1;
@@ -75,15 +74,14 @@ char	**ft_split(char const *s, char c)
 	holder[w_c] = NULL;
 	return (holder);
 }
-
-int main()
-{
-    char *str = ",,,,hello,y,world,y,are,y,you,y,ok,";
-    int i = 0;
-    char    **arr = ft_split(str, ',');
-   while (arr && arr[i])
-   {
-        printf("%s\n",arr[i]);
-        i++;
-   }
-}
+// int main()
+// {
+//     char *str = ",,,,hello,y,world,y,are,y,you,y,ok,";
+//     int i = 0;
+//     char    **arr = ft_split(str, ',');
+//    while (arr && arr[i])
+//    {
+//         printf("%s\n",arr[i]);
+//         i++;
+//    }
+// }

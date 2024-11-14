@@ -18,14 +18,14 @@ char	*ft_strrchr(const char *s, int c)
 
 	str = (char *)s;
 	str_len = ft_strlen (str);
-	if(s[0] == '\0')
-		return str;
+	if (s[0] == '\0')
+		return (str);
 	while (str_len--)
 	{
 		if (c == str[str_len])
-			return (str+str_len);
-		if((char)c == '\0' && str_len == 0)
-			return str;
+			return (str + str_len);
+		if ((char)c == '\0' && str_len == 0)
+			return (str);
 	}
 	str = NULL;
 	return (str);
@@ -36,5 +36,4 @@ char	*ft_strrchr(const char *s, int c)
 // 	char *str1;
 // 	str1 = ft_strrchr(arr, 'b');
 //         printf("%s\n", str1);
-
 // }

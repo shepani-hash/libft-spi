@@ -35,15 +35,14 @@ int	ft_atoi(const char	*str)
 	}
 	return (r_v * sign);
 }
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-// 	char str[] = "-99999999999"; // handel this case
-// 	ft_atoi(str);
-// 	char str1[] = "-99999999999"; // handel this case
-
-	printf("%d\n",atoi("\e475"));
-	printf("%d\n",ft_atoi("\e475"));
-// 	printf("%d", ft_atoi(str));// u need understood what happen whit memory
-}
+// #include <stdlib.h>
+// #include <stdio.h>
+// int main()
+// {
+// // 	char str[] = "-99999999999"; // handel this case
+// // 	ft_atoi(str);
+// // 	char str1[] = "-99999999999"; // handel this case
+// 	// printf("%d\n",atoi("\e475"));
+// 	// printf("%d\n",ft_atoi("\e475"));
+// // 	printf("%d", ft_atoi(str));// u need understood what happen whit memory
+// }
