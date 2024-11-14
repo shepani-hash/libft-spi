@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	str = (char *)s;
 	str_len = ft_strlen (str);
-	if (s[0] == '\0')
+	if (s[0] == '\0' || c == '\0')
 		return (str);
 	while (str_len--)
 	{
@@ -32,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 }
 // int main(void)
 // {
-// 	char arr[] = "bonjour";
+// 	char arr[] = "bonjr";
 // 	char *str1;
 // 	str1 = ft_strrchr(arr, 'b');
 //         printf("%s\n", str1);
