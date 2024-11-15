@@ -32,22 +32,23 @@ char	*ft_strtrim(char const	*s1, char const	*set)
 	int		j;
 
 	i = 0;
+	j = ft_strlen(s1);
+	if (j == 0)
+		return (strdup(""));
 	while (last_p(set, s1[i]))
 		i++;
-	j = ft_strlen(s1);
 	while (last_p(set, s1[j - 1]))
 		j--;
-	str1 = malloc(j - i + 1);
+	str1 = (char *)malloc((j - i + 1) * sizeof(char));
 	if (!str1)
 		return (NULL);
 	else
 		str1 = ft_substr(s1, i, j - i);
 	return (str1);
 }
-
 // int main()
 // {
-//     char    *s1 = "hh juhb hh";
-//     char    *set = "hh";
+//     char    *s1 = " 		 ";
+//     char    *set = " ";
 //     printf("%s", ft_strtrim(s1, set));
 // }

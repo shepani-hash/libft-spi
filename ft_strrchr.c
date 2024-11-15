@@ -13,21 +13,21 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*str;
-	int		str_len;
+	char			*str;
+	unsigned int	i;
+	char			c1;
 
-	str = (char *)s;
-	str_len = ft_strlen (str);
-	if (s[0] == '\0' || c == '\0')
-		return (str);
-	while (str_len--)
-	{
-		if (c == str[str_len])
-			return (str + str_len);
-		if ((char)c == '\0' && str_len == 0)
-			return (str);
-	}
+	c1 = (char)c;//the comparison limited to the range of a `char`.
+	i = 0;
 	str = NULL;
+	while (*s)
+	{
+		if (*s == c1)
+			str = (char *)s;
+		s++;
+	}
+	if (*s == c)
+		str = (char *)s;
 	return (str);
 }
 // int main(void)

@@ -20,8 +20,3 @@ size_t	ft_strlen(const char	*s)
 		i++;
 	return (i);
 }
-// int main()
-// {
-// 	char str[5] = "hello";
-// 	ft_strlen(str);
-// }

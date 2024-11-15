@@ -15,19 +15,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	size_t			i;
+	unsigned char	c1;
 
 	str = (unsigned char *)s;
 	i = 0;
+	c1 = (unsigned char)c;
 	while (str[i] && i < n)
 	{
-		if (c == str[i])
+		if (c1 == str[i])
 			return (&str[i]);
 		i++;
 	}
 	str = NULL;
 	return (str);
 }
-
 // int main(void)
 // {
 //   char buffer1[17] = "coputer program";
